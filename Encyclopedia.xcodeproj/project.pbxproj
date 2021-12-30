@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4021FC4227775CC4006C400F /* EncyclopediaViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021FC4127775CC4006C400F /* EncyclopediaViewProtocol.swift */; };
+		4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */; };
+		4021FC4B27778BDF006C400F /* EncyclopediaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */; };
+		4021FC4D27779246006C400F /* CatsReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021FC4C27779246006C400F /* CatsReusableIdentifier.swift */; };
+		4054F375277DEF180029BE10 /* EncyclopediaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F374277DEF180029BE10 /* EncyclopediaPresenter.swift */; };
+		4054F378277DF1B40029BE10 /*  EncyclopediaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F377277DF1B40029BE10 /*  EncyclopediaInteractor.swift */; };
+		4054F37A277DF3500029BE10 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F379277DF3500029BE10 /* ApiManager.swift */; };
+		4054F37C277DF3D10029BE10 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F37B277DF3D10029BE10 /* URLSessionProtocol.swift */; };
+		4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */; };
+		4054F381277E3FA90029BE10 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F380277E3FA90029BE10 /* CatModel.swift */; };
+		4054F383277E59EA0029BE10 /* EncyclopediaPayLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */; };
 		409150722774A7F100DE38EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150712774A7F100DE38EA /* AppDelegate.swift */; };
 		409150742774A7F100DE38EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150732774A7F100DE38EA /* SceneDelegate.swift */; };
-		409150762774A7F100DE38EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150752774A7F100DE38EA /* ViewController.swift */; };
+		409150762774A7F100DE38EA /* EncyclopediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150752774A7F100DE38EA /* EncyclopediaViewController.swift */; };
 		409150792774A7F100DE38EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409150772774A7F100DE38EA /* Main.storyboard */; };
 		4091507B2774A7F300DE38EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4091507A2774A7F300DE38EA /* Assets.xcassets */; };
 		4091507E2774A7F300DE38EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4091507C2774A7F300DE38EA /* LaunchScreen.storyboard */; };
@@ -37,10 +48,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4021FC4127775CC4006C400F /* EncyclopediaViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaViewProtocol.swift; sourceTree = "<group>"; };
+		4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaCollectionCellView.swift; sourceTree = "<group>"; };
+		4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaExtensions.swift; sourceTree = "<group>"; };
+		4021FC4C27779246006C400F /* CatsReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsReusableIdentifier.swift; sourceTree = "<group>"; };
+		4054F374277DEF180029BE10 /* EncyclopediaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaPresenter.swift; sourceTree = "<group>"; };
+		4054F377277DF1B40029BE10 /*  EncyclopediaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " EncyclopediaInteractor.swift"; sourceTree = "<group>"; };
+		4054F379277DF3500029BE10 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		4054F37B277DF3D10029BE10 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		4054F380277E3FA90029BE10 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
+		4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaPayLoad.swift; sourceTree = "<group>"; };
 		4091506E2774A7F100DE38EA /* Encyclopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encyclopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409150712774A7F100DE38EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		409150732774A7F100DE38EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		409150752774A7F100DE38EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		409150752774A7F100DE38EA /* EncyclopediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaViewController.swift; sourceTree = "<group>"; };
 		409150782774A7F100DE38EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4091507A2774A7F300DE38EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4091507D2774A7F300DE38EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +100,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4021FC402777596B006C400F /* Cats (VIPER) */ = {
+			isa = PBXGroup;
+			children = (
+				4054F37F277E3F8D0029BE10 /* Entity */,
+				4021FC4427775CE2006C400F /* View */,
+				4054F373277DED830029BE10 /* Presenter */,
+				4054F376277DF1640029BE10 /* Interactor */,
+				4021FC4327775CCB006C400F /* Protocol */,
+			);
+			path = "Cats (VIPER)";
+			sourceTree = "<group>";
+		};
+		4021FC4327775CCB006C400F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4021FC4127775CC4006C400F /* EncyclopediaViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4021FC4427775CE2006C400F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				409150752774A7F100DE38EA /* EncyclopediaViewController.swift */,
+				4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4021FC4927778BC4006C400F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */,
+				4021FC4C27779246006C400F /* CatsReusableIdentifier.swift */,
+				4054F379277DF3500029BE10 /* ApiManager.swift */,
+				4054F37B277DF3D10029BE10 /* URLSessionProtocol.swift */,
+				4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */,
+				4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4054F373277DED830029BE10 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4054F374277DEF180029BE10 /* EncyclopediaPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4054F376277DF1640029BE10 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4054F377277DF1B40029BE10 /*  EncyclopediaInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4054F37F277E3F8D0029BE10 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4054F380277E3FA90029BE10 /* CatModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		409150652774A7F100DE38EA = {
 			isa = PBXGroup;
 			children = (
@@ -102,9 +190,10 @@
 		409150702774A7F100DE38EA /* Encyclopedia */ = {
 			isa = PBXGroup;
 			children = (
+				4021FC4927778BC4006C400F /* Helpers */,
 				409150712774A7F100DE38EA /* AppDelegate.swift */,
 				409150732774A7F100DE38EA /* SceneDelegate.swift */,
-				409150752774A7F100DE38EA /* ViewController.swift */,
+				4021FC402777596B006C400F /* Cats (VIPER) */,
 				409150772774A7F100DE38EA /* Main.storyboard */,
 				4091507A2774A7F300DE38EA /* Assets.xcassets */,
 				4091507C2774A7F300DE38EA /* LaunchScreen.storyboard */,
@@ -262,9 +351,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				409150762774A7F100DE38EA /* ViewController.swift in Sources */,
+				4054F383277E59EA0029BE10 /* EncyclopediaPayLoad.swift in Sources */,
+				4054F378277DF1B40029BE10 /*  EncyclopediaInteractor.swift in Sources */,
+				4054F381277E3FA90029BE10 /* CatModel.swift in Sources */,
+				409150762774A7F100DE38EA /* EncyclopediaViewController.swift in Sources */,
+				4054F37A277DF3500029BE10 /* ApiManager.swift in Sources */,
 				409150722774A7F100DE38EA /* AppDelegate.swift in Sources */,
+				4021FC4D27779246006C400F /* CatsReusableIdentifier.swift in Sources */,
+				4054F37C277DF3D10029BE10 /* URLSessionProtocol.swift in Sources */,
+				4021FC4227775CC4006C400F /* EncyclopediaViewProtocol.swift in Sources */,
+				4021FC4B27778BDF006C400F /* EncyclopediaExtensions.swift in Sources */,
 				409150742774A7F100DE38EA /* SceneDelegate.swift in Sources */,
+				4054F375277DEF180029BE10 /* EncyclopediaPresenter.swift in Sources */,
+				4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */,
+				4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
