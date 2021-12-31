@@ -9,20 +9,29 @@ import Foundation
 import UIKit
 
 protocol EncyclopediaViewProtocol :AnyObject {
+    
+    var presenter: EncyclopediaPresenter? { get set}
     var collectionView : UICollectionView! { get  set }
     
 }
 
 protocol EncyclopediaPresenterProtocol {
     
-    var  encyclopediaInteractor: EncyclopediaInteractor? { get set }
+    var view: EncyclopediaViewProtocol? { get set }
+    var encyclopediaInteractor: EncyclopediaInteractorProtocol? { get set }
     func processCatListApi()
     
     
 }
 
-protocol  EncyclopediaInteractorProtocol {
+protocol EncyclopediaInteractorProtocol {
     
     func decodeCatApi()
     
+}
+
+protocol EncyclopediaRouterProtocol {
+    
+    var presenter: EncyclopediaPresenterProtocol? {get set}
+    func assembleModule(view: EncyclopediaViewProtocol)
 }

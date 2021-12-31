@@ -21,6 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let encyclopediaView = EncyclopediaViewController.viewControllers.first as? EncyclopediaViewProtocol else { return }
         
+        /// Assemble the dependecies and router here
+        EncyclopidiaRouter().assembleModule(view: encyclopediaView)
+        
         guard let _ = (scene as? UIWindowScene) else { return }
         
         

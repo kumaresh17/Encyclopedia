@@ -16,7 +16,7 @@ protocol ApiServiceProtocol :AnyObject {
 /// APIManager Protocol
 protocol ApiManagerProtocol: AnyObject {
     
-    func getCatListInfo(payload: CatsHTTPPayloadProtocol, completion: @escaping (Result<catInfoListModel,Error>) -> Void)
+    func getCatListInfo(payload: CatsHTTPPayloadProtocol, completion: @escaping (Result<catInfo,Error>) -> Void)
 }
 
 
@@ -31,6 +31,8 @@ class ApiManager: ApiServiceProtocol {
     
     /// URLSession used for query
     var urlSession: URLSessionProtocol
+    
+    var task: URLSessionDataTask?
     
     private let networkReachability: NetworkReachabilityManager?
     private(set) var reachabilityStatus: ReachabilityStatus
@@ -77,16 +79,56 @@ class ApiManager: ApiServiceProtocol {
         self.init(urlSession: URLSession.shared)
     }
     
-    private func sendRequest() {
+    private func sendRequest<T:Codable>(payLoad:CatsHTTPPayloadProtocol, completion: @escaping (Result<T,Error>) -> Void) {
         
+        if let requestUrl =  payLoad.url {
+            var urlRequest = URLRequest(url: requestUrl)
+            guard let headers = payLoad.headers else {
+                fatalError("There must be headers")
+            }
+            for (key, value) in headers {
+                urlRequest.setValue(value, forHTTPHeaderField: key)
+            }
+            urlRequest.httpMethod = payLoad.type?.httpMethod()
+            
+            task = urlSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
+                guard let data = data else {
+                    DispatchQueue.main.async {
+                        completion(.failure(error!))
+                    }
+                    return
+                }
+                var result: Result<T, Error>
+                
+                do {
+                    let decoder = JSONDecoder()
+                    let response = try decoder.decode(T.self, from: data)
+                    result = .success(response)
+                } catch let error {
+                    result = .failure(error)
+                }
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            })
+            
+            task?.resume()
+            
+        }
     }
     
 }
 
 extension ApiManager: ApiManagerProtocol {
     
-    func getCatListInfo(payload: CatsHTTPPayloadProtocol, completion: @escaping (Result<catInfoListModel,Error>) -> Void) {
-        self.sendRequest()
+    /**
+     Retrieve the cat list
+     - Parameter id:  Payload protocol, containing payload data
+     - Parameter completion: Result of api call
+     */
+    
+    func getCatListInfo(payload: CatsHTTPPayloadProtocol, completion: @escaping (Result<catInfo,Error>) -> Void) {
+        self.sendRequest(payLoad:payload, completion:completion)
     }
 }
 

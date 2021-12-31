@@ -11,7 +11,7 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol,UICo
 
     /// Search controller to help us with filtering.
     var searchController: UISearchController!
-    
+    var presenter: EncyclopediaPresenter?
     
    @IBOutlet weak var collectionView: UICollectionView!
     
@@ -27,24 +27,25 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol,UICo
         searchController.searchBar.autocapitalizationType = .none
         searchController.searchBar.searchTextField.placeholder = NSLocalizedString("Enter a cat name", comment: "")
         searchController.searchBar.returnKeyType = .done
-
+        
         // Place the search bar in the navigation bar.
         navigationItem.searchController = searchController
-            
+        
         // Make the search bar always visible.
         navigationItem.hidesSearchBarWhenScrolling = false
-     
+        
         // Monitor when the search controller is presented and dismissed.
         //searchController.delegate = self
-
+        
         // Monitor when the search button is tapped, and start/end editing.
         //searchController.searchBar.delegate = self
         
         /** Specify that this view controller determines how the search controller is presented.
-            The search controller should be presented modally and match the physical size of this view controller.
-        */
-       definesPresentationContext = true
-
+         The search controller should be presented modally and match the physical size of this view controller.
+         */
+        definesPresentationContext = true
+        presenter?.processCatListApi()
+        
     }
     
 }

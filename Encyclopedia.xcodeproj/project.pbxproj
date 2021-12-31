@@ -28,6 +28,7 @@
 		409150932774A7F300DE38EA /* EncyclopediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150922774A7F300DE38EA /* EncyclopediaUITests.swift */; };
 		409150952774A7F300DE38EA /* EncyclopediaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150942774A7F300DE38EA /* EncyclopediaUITestsLaunchTests.swift */; };
 		409150A22774A83500DE38EA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 409150A12774A83500DE38EA /* README.md */; };
+		40A43C7C277F338B007D181E /* EncyclopidiaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A43C7B277F338B007D181E /* EncyclopidiaRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		409150922774A7F300DE38EA /* EncyclopediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaUITests.swift; sourceTree = "<group>"; };
 		409150942774A7F300DE38EA /* EncyclopediaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		409150A12774A83500DE38EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		40A43C7B277F338B007D181E /* EncyclopidiaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopidiaRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +105,12 @@
 		4021FC402777596B006C400F /* Cats (VIPER) */ = {
 			isa = PBXGroup;
 			children = (
-				4054F37F277E3F8D0029BE10 /* Entity */,
+				4021FC4327775CCB006C400F /* Protocol */,
+				40A43C7D277F33DC007D181E /* Router */,
 				4021FC4427775CE2006C400F /* View */,
 				4054F373277DED830029BE10 /* Presenter */,
 				4054F376277DF1640029BE10 /* Interactor */,
-				4021FC4327775CCB006C400F /* Protocol */,
+				4054F37F277E3F8D0029BE10 /* Entity */,
 			);
 			path = "Cats (VIPER)";
 			sourceTree = "<group>";
@@ -190,9 +193,9 @@
 		409150702774A7F100DE38EA /* Encyclopedia */ = {
 			isa = PBXGroup;
 			children = (
-				4021FC4927778BC4006C400F /* Helpers */,
 				409150712774A7F100DE38EA /* AppDelegate.swift */,
 				409150732774A7F100DE38EA /* SceneDelegate.swift */,
+				4021FC4927778BC4006C400F /* Helpers */,
 				4021FC402777596B006C400F /* Cats (VIPER) */,
 				409150772774A7F100DE38EA /* Main.storyboard */,
 				4091507A2774A7F300DE38EA /* Assets.xcassets */,
@@ -217,6 +220,14 @@
 				409150942774A7F300DE38EA /* EncyclopediaUITestsLaunchTests.swift */,
 			);
 			path = EncyclopediaUITests;
+			sourceTree = "<group>";
+		};
+		40A43C7D277F33DC007D181E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				40A43C7B277F338B007D181E /* EncyclopidiaRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +376,7 @@
 				4054F375277DEF180029BE10 /* EncyclopediaPresenter.swift in Sources */,
 				4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */,
 				4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */,
+				40A43C7C277F338B007D181E /* EncyclopidiaRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

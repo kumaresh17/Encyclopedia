@@ -9,7 +9,8 @@ import Foundation
 
 struct EncyclopediaPresenter :EncyclopediaPresenterProtocol {
     
-    var  encyclopediaInteractor: EncyclopediaInteractor?
+    var view: EncyclopediaViewProtocol? 
+    var encyclopediaInteractor: EncyclopediaInteractorProtocol? 
     
     func processCatListApi() {
           
