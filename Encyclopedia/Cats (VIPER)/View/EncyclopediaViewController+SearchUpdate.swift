@@ -24,7 +24,7 @@ extension EncyclopediaViewController: UISearchResultsUpdating {
             let searchItems = strippedString.components(separatedBy: " ") as [String]
             
             // Filter results down by cat name,
-            var filtered = searchResults
+            var filtered:[CatsResponse]? = searchResults
             var curTerm = searchItems[0]
             var idx = 0
             while curTerm != "" {
@@ -35,7 +35,8 @@ extension EncyclopediaViewController: UISearchResultsUpdating {
                 curTerm = (idx < searchItems.count) ? searchItems[idx] : ""
             }
             // Apply the filtered results to the collection view.
-                resultFilterData = filtered!
+            guard let filterData = filtered else {return}
+                resultFilterData = filterData
                 collectionView.reloadData()
         }
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AsynFetcherProtocol  {
+protocol AsynFetcherProtocol:AnyObject  {
     func fetchAsync(_ identifier: UUID, ImageURl:URL, completion: ((DisplayImage?) -> Void)? )
     func fetchedData(for identifier: UUID) -> DisplayImage?
     func cancelFetch(_ identifier: UUID) 
