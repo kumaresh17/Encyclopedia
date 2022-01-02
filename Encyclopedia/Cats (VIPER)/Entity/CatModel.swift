@@ -79,3 +79,21 @@ struct Weight: Codable {
 
 typealias catInfo = [CatInfoModel]
 
+protocol CatsResponseProtocol {
+    var name: String? {get set}
+    var imageurl: String? {get set}
+    var temperament: String? {get set}
+    var energylevel: Int {get set}
+    var externalLinkToWikipedia: String? {get set}
+    var identifier : UUID? {get set}
+}
+
+struct CatsResponse: CatsResponseProtocol {
+    var name: String?
+    var imageurl: String?
+    var temperament: String?
+    var energylevel: Int
+    var externalLinkToWikipedia: String?
+    var identifier : UUID?
+    
+}

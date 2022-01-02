@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct  EncyclopediaInteractor: EncyclopediaInteractorProtocol,PayLoadFormat {
+class  EncyclopediaInteractor: EncyclopediaInteractorProtocol,PayLoadFormat {
+    
+    var outputProtocol:EncyclopediaOutputProtocol?
     
     func decodeCatApi() {
         
@@ -18,9 +20,15 @@ struct  EncyclopediaInteractor: EncyclopediaInteractorProtocol,PayLoadFormat {
         api.getCatListInfo(payload: payload ){ result in
             switch result {
             case .success(let data):
-               print("sucess")
+              
+                guard data.count > 0 else {
+                    self.outputProtocol?.errorOccured(message: "no cats")
+                    return
+                }
+                self.outputProtocol?.catsInfoDidFetch(cats: data)
+                
             case .failure(let error):
-                print("fail")
+                self.outputProtocol?.errorOccured(message: error.localizedDescription)
             }
         }
             

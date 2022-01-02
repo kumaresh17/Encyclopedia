@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40201FDE2781100400054257 /* AsyncFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40201FDD2781100400054257 /* AsyncFetcher.swift */; };
+		40201FE02781117800054257 /* AsyncFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40201FDF2781117800054257 /* AsyncFetcherOperation.swift */; };
+		40201FE2278111FF00054257 /* DisplayImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40201FE1278111FF00054257 /* DisplayImage.swift */; };
 		4021FC4227775CC4006C400F /* EncyclopediaViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021FC4127775CC4006C400F /* EncyclopediaViewProtocol.swift */; };
 		4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */; };
 		4021FC4B27778BDF006C400F /* EncyclopediaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40201FDD2781100400054257 /* AsyncFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFetcher.swift; sourceTree = "<group>"; };
+		40201FDF2781117800054257 /* AsyncFetcherOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFetcherOperation.swift; sourceTree = "<group>"; };
+		40201FE1278111FF00054257 /* DisplayImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImage.swift; sourceTree = "<group>"; };
 		4021FC4127775CC4006C400F /* EncyclopediaViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaViewProtocol.swift; sourceTree = "<group>"; };
 		4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaCollectionCellView.swift; sourceTree = "<group>"; };
 		4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaExtensions.swift; sourceTree = "<group>"; };
@@ -102,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40201FDC27810FE000054257 /* Async Utility */ = {
+			isa = PBXGroup;
+			children = (
+				40201FDD2781100400054257 /* AsyncFetcher.swift */,
+				40201FDF2781117800054257 /* AsyncFetcherOperation.swift */,
+				40201FE1278111FF00054257 /* DisplayImage.swift */,
+			);
+			path = "Async Utility";
+			sourceTree = "<group>";
+		};
 		4021FC402777596B006C400F /* Cats (VIPER) */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +151,7 @@
 		4021FC4927778BC4006C400F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				40201FDC27810FE000054257 /* Async Utility */,
 				4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */,
 				4021FC4C27779246006C400F /* CatsReusableIdentifier.swift */,
 				4054F379277DF3500029BE10 /* ApiManager.swift */,
@@ -372,10 +389,13 @@
 				4054F37C277DF3D10029BE10 /* URLSessionProtocol.swift in Sources */,
 				4021FC4227775CC4006C400F /* EncyclopediaViewProtocol.swift in Sources */,
 				4021FC4B27778BDF006C400F /* EncyclopediaExtensions.swift in Sources */,
+				40201FE02781117800054257 /* AsyncFetcherOperation.swift in Sources */,
 				409150742774A7F100DE38EA /* SceneDelegate.swift in Sources */,
 				4054F375277DEF180029BE10 /* EncyclopediaPresenter.swift in Sources */,
+				40201FDE2781100400054257 /* AsyncFetcher.swift in Sources */,
 				4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */,
 				4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */,
+				40201FE2278111FF00054257 /* DisplayImage.swift in Sources */,
 				40A43C7C277F338B007D181E /* EncyclopidiaRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

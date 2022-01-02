@@ -10,15 +10,37 @@ import UIKit
 final class EncyclopediaCollectionCellView: UICollectionViewCell {
     
     @IBOutlet weak var catImageView: UIImageView!
-    @IBOutlet weak var catName: UILabel!
+    @IBOutlet weak var catNameLabel: UILabel!
+    
+    /// The `UUID` for the data this cell is presenting.
+    var representedIdentifier: UUID?
     
     
-    func configureCatCell()  {
-        
-        let imageUrl = URL(string: "https://cdn2.thecatapi.com/images/ZfqxG7ZHH.jpg")
-        catImageView.load(url:imageUrl! )
-        catName.text = "cat1"
-        
+    func displayData(catsImage: UIImage?, catName:String?) {
+
+       // let placeholderImage = UIImage(named: "placeholder")!
+        catNameLabel.text = catName
+        catImageView.image = catsImage
+
     }
     
+    
+//    func displayData(cats:CatsResponse?) {
+//
+//        guard let imageUrlStr = cats?.imageurl else {return}
+//        guard let imageUrl = URL(string:imageUrlStr) else {return }
+////
+////        let placeholderImage = UIImage(named: "placeholder")!
+////        catImageView.image = placeholderImage
+////
+//          catImageView.load(url:imageUrl)
+////        catName.text = cats?.name
+//
+//
+//        catNameLabel.text = cats?.name
+//
+//
+//    }
+    
 }
+

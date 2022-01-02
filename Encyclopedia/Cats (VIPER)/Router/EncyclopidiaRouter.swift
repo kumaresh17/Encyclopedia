@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EncyclopidiaRouter: EncyclopediaRouterProtocol {
+class EncyclopidiaRouter: EncyclopediaRouterProtocol {
     
     var presenter: EncyclopediaPresenterProtocol?
     
@@ -15,13 +15,15 @@ struct EncyclopidiaRouter: EncyclopediaRouterProtocol {
     func assembleModule(view: EncyclopediaViewProtocol) {
         
         var presenter = EncyclopediaPresenter()
-        let interactor = EncyclopediaInteractor()
+        var interactor = EncyclopediaInteractor()
         //let router = EncyclopidiaRouter()
         
         presenter.view = view
+      
         presenter.encyclopediaInteractor = interactor
         view.presenter = presenter
-        
+        interactor.outputProtocol = presenter
+       
         
         
         
