@@ -14,8 +14,8 @@ class EncyclopidiaRouter: EncyclopediaRouterProtocol {
     /// Build  the VIPER modules here
     func assembleModule(view: EncyclopediaViewProtocol) {
         
-        var presenter = EncyclopediaPresenter()
-        var interactor = EncyclopediaInteractor()
+        let presenter = EncyclopediaPresenter()
+        let interactor = EncyclopediaInteractor()
         //let router = EncyclopidiaRouter()
         
         presenter.view = view
@@ -23,9 +23,6 @@ class EncyclopidiaRouter: EncyclopediaRouterProtocol {
         presenter.encyclopediaInteractor = interactor
         view.presenter = presenter
         interactor.outputProtocol = presenter
-       
-        
-        
-        
+
     }
 }

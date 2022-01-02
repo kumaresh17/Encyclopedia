@@ -20,7 +20,7 @@ class AsyncFetcherOperation: Operation {
     let identifier: UUID
     let ImageUrl: URL
 
-    /// The `DisplayData` that has been fetched by this operation.
+    /// The `DisplayImage` that has been fetched by this operation.
     private(set) var fetchedData: DisplayImage?
 
     // MARK: Initialization

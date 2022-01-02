@@ -72,7 +72,10 @@ class ApiManager: ApiServiceProtocol {
      Show Alert message on no network connection
      */
     private func showErrorForNoNetwork()  {
-
+        task?.suspend()
+        DispatchQueue.main.async {
+            AlertViewController.showAlert(withTitle: alertTitle, message: networkError)
+        }
     }
     
     public convenience init() {

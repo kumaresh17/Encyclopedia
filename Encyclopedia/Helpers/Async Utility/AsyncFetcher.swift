@@ -6,11 +6,10 @@
 //
 
 import Foundation
-import UIKit
-/// - Tag: AsyncFetcher
-class AsyncFetcher {
-    // MARK: Types
 
+
+class AsyncFetcher: NSCache<AnyObject, AnyObject> {
+ 
     /// A serial `OperationQueue` to lock access to the `fetchQueue` and `completionHandlers` properties.
     private let serialAccessQueue = OperationQueue()
 
@@ -25,8 +24,13 @@ class AsyncFetcher {
 
     // MARK: Initialization
 
-    init() {
+    override init() {
+        super.init()
         serialAccessQueue.maxConcurrentOperationCount = 1
+        // For our image cache, we will set a maximum cost of 50,000,0000 bytes, or 500 megabytes.
+        //TODO: We can sue LRU instead of NSCache as an improvment
+        cache.totalCostLimit = memoryLimitConstant
+        cache.delegate = self
     }
 
     // MARK: Object fetching
@@ -59,6 +63,7 @@ class AsyncFetcher {
      */
     func fetchedData(for identifier: UUID) -> DisplayImage? {
         return cache.object(forKey: identifier as NSUUID)
+       
     }
 
     /**
@@ -101,7 +106,9 @@ class AsyncFetcher {
             // Set the operation's completion block to cache the fetched object and call the associated completion blocks.
             operation.completionBlock = { [weak operation] in
                 guard let fetchedData = operation?.fetchedData else { return }
-                self.cache.setObject(fetchedData, forKey: identifier as NSUUID)
+                guard let imageData = fetchedData.imageCat?.pngData() else { return }
+                // The cost of our image is its size in bytes.
+                self.cache.setObject(fetchedData, forKey:identifier as NSUUID, cost: imageData.count)
                 
                 self.serialAccessQueue.addOperation {
                     self.invokeCompletionHandlers(for: identifier, with: fetchedData)
@@ -142,6 +149,13 @@ class AsyncFetcher {
         for completionHandler in completionHandlers {
             completionHandler(fetchedData)
         }
+    }
+}
+
+extension AsyncFetcher: NSCacheDelegate
+{
+    func cache(_ cache: NSCache<AnyObject, AnyObject>, willEvictObject obj: Any) {
+       //TODO: To perform some action which image is removed from the cache as pe the memory limit
     }
 }
 

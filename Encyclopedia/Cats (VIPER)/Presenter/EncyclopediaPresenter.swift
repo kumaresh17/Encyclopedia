@@ -38,9 +38,9 @@ extension EncyclopediaPresenter: EncyclopediaOutputProtocol {
             let response = CatsResponse(name: $0.name, imageurl: $0.image?.url?.description, temperament: $0.temperament, energylevel: $0.energyLevel, externalLinkToWikipedia: $0.wikipediaURL?.description,identifier: UUID())
             self.response?.append(response)
         }
-        view?.collectionView.reloadData()
+        view?.reloadCatsCollectionView()
     }
     func errorOccured(message: String) {
-       print("fail")
+        AlertViewController.showAlert(withTitle: alertTitle, message: networkError)
     }
 }

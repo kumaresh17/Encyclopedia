@@ -21,6 +21,11 @@
 		4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */; };
 		4054F381277E3FA90029BE10 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F380277E3FA90029BE10 /* CatModel.swift */; };
 		4054F383277E59EA0029BE10 /* EncyclopediaPayLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */; };
+		408F253F2781D12E00CD34F1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F253E2781D12E00CD34F1 /* ActivityView.swift */; };
+		408F25412781D17D00CD34F1 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25402781D17D00CD34F1 /* LayoutHelper.swift */; };
+		408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */; };
+		408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */; };
+		408F25472781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */; };
 		409150722774A7F100DE38EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150712774A7F100DE38EA /* AppDelegate.swift */; };
 		409150742774A7F100DE38EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150732774A7F100DE38EA /* SceneDelegate.swift */; };
 		409150762774A7F100DE38EA /* EncyclopediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150752774A7F100DE38EA /* EncyclopediaViewController.swift */; };
@@ -66,6 +71,11 @@
 		4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		4054F380277E3FA90029BE10 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
 		4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaPayLoad.swift; sourceTree = "<group>"; };
+		408F253E2781D12E00CD34F1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		408F25402781D17D00CD34F1 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
+		408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaConstants.swift; sourceTree = "<group>"; };
+		408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+SearchUpdate.swift"; sourceTree = "<group>"; };
+		408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+DataSourcePrefetching.swift"; sourceTree = "<group>"; };
 		4091506E2774A7F100DE38EA /* Encyclopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encyclopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409150712774A7F100DE38EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		409150732774A7F100DE38EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				409150752774A7F100DE38EA /* EncyclopediaViewController.swift */,
+				408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */,
+				408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */,
 				4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */,
 			);
 			path = View;
@@ -158,6 +170,9 @@
 				4054F37B277DF3D10029BE10 /* URLSessionProtocol.swift */,
 				4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */,
 				4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */,
+				408F253E2781D12E00CD34F1 /* ActivityView.swift */,
+				408F25402781D17D00CD34F1 /* LayoutHelper.swift */,
+				408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -385,16 +400,21 @@
 				409150762774A7F100DE38EA /* EncyclopediaViewController.swift in Sources */,
 				4054F37A277DF3500029BE10 /* ApiManager.swift in Sources */,
 				409150722774A7F100DE38EA /* AppDelegate.swift in Sources */,
+				408F253F2781D12E00CD34F1 /* ActivityView.swift in Sources */,
 				4021FC4D27779246006C400F /* CatsReusableIdentifier.swift in Sources */,
 				4054F37C277DF3D10029BE10 /* URLSessionProtocol.swift in Sources */,
 				4021FC4227775CC4006C400F /* EncyclopediaViewProtocol.swift in Sources */,
 				4021FC4B27778BDF006C400F /* EncyclopediaExtensions.swift in Sources */,
+				408F25412781D17D00CD34F1 /* LayoutHelper.swift in Sources */,
 				40201FE02781117800054257 /* AsyncFetcherOperation.swift in Sources */,
 				409150742774A7F100DE38EA /* SceneDelegate.swift in Sources */,
 				4054F375277DEF180029BE10 /* EncyclopediaPresenter.swift in Sources */,
 				40201FDE2781100400054257 /* AsyncFetcher.swift in Sources */,
 				4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */,
 				4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */,
+				408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */,
+				408F25472781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift in Sources */,
+				408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift in Sources */,
 				40201FE2278111FF00054257 /* DisplayImage.swift in Sources */,
 				40A43C7C277F338B007D181E /* EncyclopidiaRouter.swift in Sources */,
 			);

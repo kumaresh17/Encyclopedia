@@ -9,13 +9,13 @@ import UIKit
 
 class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
    
-    
-
     /// Search controller to help us with filtering.
-    var searchController: UISearchController!
+   private var searchController: UISearchController!
     var presenter: EncyclopediaPresenter?
     /// An `AsyncFetcher` that is used to asynchronously fetch `DisplayData` objects.
-    private let asyncFetcher = AsyncFetcher()
+     let asyncFetcher = AsyncFetcher()
+     var catResponseData: [CatsResponse]?
+     var resultFilterData: [CatsResponse]?
     
    @IBOutlet weak var collectionView: UICollectionView!
     
@@ -23,11 +23,14 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //resultsTableController = ResultsTableController()
-        //resultsTableController.suggestedSearchDelegate = self // So we can be notified when a suggested search token is selected.
+        setUpSearchController()
+        presenter?.processCatListApi()
         
+    }
+    
+   private func setUpSearchController() {
         searchController = UISearchController()
-        //searchController.searchResultsUpdater = self
+        searchController.searchResultsUpdater = self
         searchController.searchBar.autocapitalizationType = .none
         searchController.searchBar.searchTextField.placeholder = NSLocalizedString("Enter a cat name", comment: "")
         searchController.searchBar.returnKeyType = .done
@@ -39,19 +42,14 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
         navigationItem.hidesSearchBarWhenScrolling = false
         
         // Monitor when the search controller is presented and dismissed.
-        //searchController.delegate = self
-        
-        // Monitor when the search button is tapped, and start/end editing.
-        //searchController.searchBar.delegate = self
-        
-        /** Specify that this view controller determines how the search controller is presented.
-         The search controller should be presented modally and match the physical size of this view controller.
-         */
-        
+        searchController.delegate = self
         collectionView.prefetchDataSource = self
         definesPresentationContext = true
-        presenter?.processCatListApi()
-        
+    }
+    
+    func reloadCatsCollectionView() {
+        catResponseData = (presenter?.response)
+        collectionView.reloadData()
     }
     
 }
@@ -60,11 +58,14 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
 extension EncyclopediaViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 1
     }
     
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         guard let data = presenter?.response else { return 0 }
+         
+         let useThisDataForCollectionView = resultFilterData ?? catResponseData
+         
+         guard let data = useThisDataForCollectionView else { return 0 }
          return data.count
     }
     
@@ -75,13 +76,15 @@ extension EncyclopediaViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EncyclopediaCollectionCellView.reuseIdentifier, for: indexPath) as? EncyclopediaCollectionCellView else {
             fatalError("no cell formed")
         }
-        
-        if let catData = presenter?.response?[indexPath.item] {
-            
-            //cell.displayData(cats: catData)
-            
+                
+        let useThisDataForCollectionView = resultFilterData ?? catResponseData
+     
+        if let catData = useThisDataForCollectionView?[indexPath.item] {
+                        
             cell.representedIdentifier = catData.identifier
-            guard let imageUrlString = catData.imageurl else {return cell}
+            guard let imageUrlString = catData.imageurl else {
+                cell.displayData(catsImage: nil, catName: catData.name)
+                return cell}
             let imageUrl = URL(string:imageUrlString)
 
             // Check if the `asyncFetcher` has already fetched data for the specified identifier.
@@ -110,32 +113,11 @@ extension EncyclopediaViewController: UICollectionViewDataSource {
         }
         
         return cell
-    }    
-}
-
-extension EncyclopediaViewController: UICollectionViewDataSourcePrefetching {
-    
-    // MARK: UICollectionViewDataSourcePrefetching
-
-    /// - Tag: Prefetching
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        // Begin asynchronously fetching data for the requested index paths.
-        for indexPath in indexPaths {
-            let model = presenter?.response?[indexPath.item]
-            let imageUrl = URL(string:(model?.imageurl!)!)
-            asyncFetcher.fetchAsync((model?.identifier)!, ImageURl: imageUrl!)
-        }
-    }
-
-    /// - Tag: CancelPrefetching
-    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
-        // Cancel any in-flight requests for data for the specified index paths.
-        for indexPath in indexPaths {
-            let model = presenter?.response?[indexPath.item]
-            asyncFetcher.cancelFetch((model?.identifier)!)
-        }
     }
 }
+
+
+
 
 
 

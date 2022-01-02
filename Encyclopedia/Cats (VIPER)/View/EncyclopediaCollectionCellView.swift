@@ -17,30 +17,15 @@ final class EncyclopediaCollectionCellView: UICollectionViewCell {
     
     
     func displayData(catsImage: UIImage?, catName:String?) {
-
-       // let placeholderImage = UIImage(named: "placeholder")!
+        
+        if catsImage == nil {
+            catImageView.image =  UIImage(named: "placeholder")!
+        } else {
+            catImageView.image = catsImage
+        }
         catNameLabel.text = catName
-        catImageView.image = catsImage
-
+        
     }
-    
-    
-//    func displayData(cats:CatsResponse?) {
-//
-//        guard let imageUrlStr = cats?.imageurl else {return}
-//        guard let imageUrl = URL(string:imageUrlStr) else {return }
-////
-////        let placeholderImage = UIImage(named: "placeholder")!
-////        catImageView.image = placeholderImage
-////
-//          catImageView.load(url:imageUrl)
-////        catName.text = cats?.name
-//
-//
-//        catNameLabel.text = cats?.name
-//
-//
-//    }
     
 }
 

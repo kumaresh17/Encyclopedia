@@ -12,6 +12,7 @@ protocol EncyclopediaViewProtocol :AnyObject {
     
     var presenter: EncyclopediaPresenter? { get set}
     var collectionView : UICollectionView! { get  set }
+    func reloadCatsCollectionView()
     
 }
 
