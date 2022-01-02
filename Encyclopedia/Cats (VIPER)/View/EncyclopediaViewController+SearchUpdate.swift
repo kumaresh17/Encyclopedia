@@ -16,7 +16,6 @@ extension EncyclopediaViewController: UISearchResultsUpdating {
             resultFilterData = nil
             collectionView.reloadData()
         } else {
-            // Update the resultsController's filtered items based on the search terms and suggested search token.
             let searchResults = catResponseData
 
             // Strip out all the leading and trailing spaces.
@@ -24,7 +23,7 @@ extension EncyclopediaViewController: UISearchResultsUpdating {
             let strippedString = searchController.searchBar.text!.trimmingCharacters(in: whitespaceCharacterSet).lowercased()
             let searchItems = strippedString.components(separatedBy: " ") as [String]
             
-            // Filter results down by title, yearIntroduced and introPrice.
+            // Filter results down by cat name,
             var filtered = searchResults
             var curTerm = searchItems[0]
             var idx = 0
@@ -35,7 +34,7 @@ extension EncyclopediaViewController: UISearchResultsUpdating {
                 idx += 1
                 curTerm = (idx < searchItems.count) ? searchItems[idx] : ""
             }
-            // Apply the filtered results to the search results table.
+            // Apply the filtered results to the collection view.
                 resultFilterData = filtered!
                 collectionView.reloadData()
         }

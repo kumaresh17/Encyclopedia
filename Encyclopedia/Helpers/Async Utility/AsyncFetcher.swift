@@ -7,8 +7,13 @@
 
 import Foundation
 
+protocol AsynFetcherProtocol  {
+    func fetchAsync(_ identifier: UUID, ImageURl:URL, completion: ((DisplayImage?) -> Void)? )
+    func fetchedData(for identifier: UUID) -> DisplayImage?
+    func cancelFetch(_ identifier: UUID) 
+}
 
-class AsyncFetcher: NSCache<AnyObject, AnyObject> {
+class AsyncFetcher: NSCache<AnyObject, AnyObject>, AsynFetcherProtocol{
  
     /// A serial `OperationQueue` to lock access to the `fetchQueue` and `completionHandlers` properties.
     private let serialAccessQueue = OperationQueue()
@@ -27,8 +32,8 @@ class AsyncFetcher: NSCache<AnyObject, AnyObject> {
     override init() {
         super.init()
         serialAccessQueue.maxConcurrentOperationCount = 1
-        // For our image cache, we will set a maximum cost of 50,000,0000 bytes, or 500 megabytes.
-        //TODO: We can sue LRU instead of NSCache as an improvment
+        // For our image cache, we will set a maximum cost of 100,000,0000 bytes
+        //TODO: We can use LRU(Least recently used) instead of NSCache as an improvement
         cache.totalCostLimit = memoryLimitConstant
         cache.delegate = self
     }
@@ -156,6 +161,7 @@ extension AsyncFetcher: NSCacheDelegate
 {
     func cache(_ cache: NSCache<AnyObject, AnyObject>, willEvictObject obj: Any) {
        //TODO: To perform some action which image is removed from the cache as pe the memory limit
+        print("image Evicted from NScache to save memory")
     }
 }
 

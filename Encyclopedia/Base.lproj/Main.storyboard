@@ -93,21 +93,80 @@
             </objects>
             <point key="canvasLocation" x="-2435" y="-60"/>
         </scene>
-        <!--View Controller-->
+        <!--Cat Detail View Controller-->
         <scene sceneID="edY-xH-nh8">
             <objects>
-                <viewController id="ihf-SS-208" sceneMemberID="viewController">
+                <viewController id="ihf-SS-208" customClass="CatDetailViewController" customModule="Encyclopedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONb-p5-lNi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-Yw-DB9">
+                                <rect key="frame" x="15" y="99" width="384" height="352"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKE-Vj-gqY">
+                                <rect key="frame" x="20" y="471" width="374" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="XvD-7G-vh9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjT-H5-b1J">
+                                <rect key="frame" x="20" y="523" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJH-h5-hYb">
+                                <rect key="frame" x="20" y="563.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60G-cL-W1a">
+                                <rect key="frame" x="20" y="604" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="External link to Wikipedia"/>
+                                <connections>
+                                    <action selector="wikiLinkAction:" destination="ihf-SS-208" eventType="touchUpInside" id="xeK-8h-RBA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UQh-SB-Egx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YKE-Vj-gqY" firstAttribute="trailing" secondItem="8Gv-Yw-DB9" secondAttribute="trailing" constant="-5" id="1HE-Nz-YaO"/>
+                            <constraint firstItem="nJH-h5-hYb" firstAttribute="top" secondItem="UjT-H5-b1J" secondAttribute="bottom" constant="20" id="8N6-82-Muc"/>
+                            <constraint firstItem="UjT-H5-b1J" firstAttribute="leading" secondItem="YKE-Vj-gqY" secondAttribute="leading" id="C9p-zV-46q"/>
+                            <constraint firstItem="60G-cL-W1a" firstAttribute="leading" secondItem="UjT-H5-b1J" secondAttribute="leading" id="DXI-Ge-iou"/>
+                            <constraint firstItem="UQh-SB-Egx" firstAttribute="bottom" secondItem="60G-cL-W1a" secondAttribute="bottom" constant="227" id="MXF-ig-3WP"/>
+                            <constraint firstItem="UjT-H5-b1J" firstAttribute="top" secondItem="YKE-Vj-gqY" secondAttribute="bottom" constant="20" id="NMf-2S-oJB"/>
+                            <constraint firstItem="8Gv-Yw-DB9" firstAttribute="leading" secondItem="UQh-SB-Egx" secondAttribute="leading" constant="15" id="Qwv-Em-QtQ"/>
+                            <constraint firstItem="nJH-h5-hYb" firstAttribute="trailing" secondItem="UjT-H5-b1J" secondAttribute="trailing" id="RM5-Ql-nea"/>
+                            <constraint firstItem="8Gv-Yw-DB9" firstAttribute="top" secondItem="UQh-SB-Egx" secondAttribute="top" constant="11" id="Tpi-xJ-BBw"/>
+                            <constraint firstItem="UjT-H5-b1J" firstAttribute="trailing" secondItem="YKE-Vj-gqY" secondAttribute="trailing" id="X17-Xp-szt"/>
+                            <constraint firstItem="YKE-Vj-gqY" firstAttribute="leading" secondItem="8Gv-Yw-DB9" secondAttribute="leading" constant="5" id="c1l-xL-FUl"/>
+                            <constraint firstItem="UQh-SB-Egx" firstAttribute="trailing" secondItem="8Gv-Yw-DB9" secondAttribute="trailing" constant="15" id="d4E-6W-n7s"/>
+                            <constraint firstItem="60G-cL-W1a" firstAttribute="trailing" secondItem="UjT-H5-b1J" secondAttribute="trailing" id="fs8-iO-75A"/>
+                            <constraint firstItem="YKE-Vj-gqY" firstAttribute="top" secondItem="8Gv-Yw-DB9" secondAttribute="bottom" constant="20" id="jCz-KX-zRH"/>
+                            <constraint firstItem="60G-cL-W1a" firstAttribute="top" secondItem="nJH-h5-hYb" secondAttribute="bottom" constant="20" id="jb0-5r-lbL"/>
+                            <constraint firstItem="nJH-h5-hYb" firstAttribute="leading" secondItem="UjT-H5-b1J" secondAttribute="leading" id="m9y-Wn-GL3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8He-vM-wYS"/>
+                    <connections>
+                        <outlet property="catEnergyLevelLabel" destination="nJH-h5-hYb" id="1i2-fW-0FR"/>
+                        <outlet property="catImageView" destination="8Gv-Yw-DB9" id="jtD-cl-YrP"/>
+                        <outlet property="catTemperamentLabel" destination="UjT-H5-b1J" id="01j-gg-L0G"/>
+                        <outlet property="nameOfTheCatLabel" destination="YKE-Vj-gqY" id="mbi-rD-POA"/>
+                        <outlet property="wikiLinkButton" destination="60G-cL-W1a" id="L1e-Lu-Jgj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdW-02-sfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1611" y="-46"/>
+            <point key="canvasLocation" x="-1611.5942028985507" y="-46.205357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qRC-Wi-3qu">

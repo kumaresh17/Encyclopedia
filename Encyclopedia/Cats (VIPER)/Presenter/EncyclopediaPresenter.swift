@@ -11,12 +11,16 @@ class EncyclopediaPresenter :EncyclopediaPresenterProtocol {
     
     var view: EncyclopediaViewProtocol?
     var response: [CatsResponse]?
+    var router: EncyclopediaRouterProtocol?
     var encyclopediaInteractor: EncyclopediaInteractorProtocol? 
     
     func processCatListApi() {
-          
         encyclopediaInteractor?.decodeCatApi()
-
+    }
+    
+    func pushToDetailView(detailView: CatDetailsViewProtocol, forResponse: CatsResponse?) {
+        guard let result = forResponse else { return }
+        router?.showDetailView(detailView: detailView, catResposne:result)
     }
     
 }

@@ -26,6 +26,9 @@
 		408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */; };
 		408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */; };
 		408F25472781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */; };
+		408F254A278230BA00CD34F1 /* CatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F2549278230BA00CD34F1 /* CatDetailViewController.swift */; };
+		408F254C2782311200CD34F1 /* CatDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F254B2782311200CD34F1 /* CatDetailsViewProtocol.swift */; };
+		408F254E2782370500CD34F1 /* CatDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F254D2782370500CD34F1 /* CatDetailRouter.swift */; };
 		409150722774A7F100DE38EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150712774A7F100DE38EA /* AppDelegate.swift */; };
 		409150742774A7F100DE38EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150732774A7F100DE38EA /* SceneDelegate.swift */; };
 		409150762774A7F100DE38EA /* EncyclopediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409150752774A7F100DE38EA /* EncyclopediaViewController.swift */; };
@@ -76,6 +79,9 @@
 		408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaConstants.swift; sourceTree = "<group>"; };
 		408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+SearchUpdate.swift"; sourceTree = "<group>"; };
 		408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+DataSourcePrefetching.swift"; sourceTree = "<group>"; };
+		408F2549278230BA00CD34F1 /* CatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailViewController.swift; sourceTree = "<group>"; };
+		408F254B2782311200CD34F1 /* CatDetailsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsViewProtocol.swift; sourceTree = "<group>"; };
+		408F254D2782370500CD34F1 /* CatDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailRouter.swift; sourceTree = "<group>"; };
 		4091506E2774A7F100DE38EA /* Encyclopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encyclopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409150712774A7F100DE38EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		409150732774A7F100DE38EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				4021FC4127775CC4006C400F /* EncyclopediaViewProtocol.swift */,
+				408F254B2782311200CD34F1 /* CatDetailsViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 				408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */,
 				408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */,
 				4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */,
+				408F25482782307A00CD34F1 /* Cat Detail View */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,12 +171,10 @@
 		4021FC4927778BC4006C400F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				408F254F278244E900CD34F1 /* URLSession Utility */,
 				40201FDC27810FE000054257 /* Async Utility */,
 				4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */,
 				4021FC4C27779246006C400F /* CatsReusableIdentifier.swift */,
-				4054F379277DF3500029BE10 /* ApiManager.swift */,
-				4054F37B277DF3D10029BE10 /* URLSessionProtocol.swift */,
-				4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */,
 				4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */,
 				408F253E2781D12E00CD34F1 /* ActivityView.swift */,
 				408F25402781D17D00CD34F1 /* LayoutHelper.swift */,
@@ -199,6 +205,24 @@
 				4054F380277E3FA90029BE10 /* CatModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		408F25482782307A00CD34F1 /* Cat Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				408F2549278230BA00CD34F1 /* CatDetailViewController.swift */,
+			);
+			path = "Cat Detail View";
+			sourceTree = "<group>";
+		};
+		408F254F278244E900CD34F1 /* URLSession Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4054F379277DF3500029BE10 /* ApiManager.swift */,
+				4054F37B277DF3D10029BE10 /* URLSessionProtocol.swift */,
+				4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */,
+			);
+			path = "URLSession Utility";
 			sourceTree = "<group>";
 		};
 		409150652774A7F100DE38EA = {
@@ -258,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				40A43C7B277F338B007D181E /* EncyclopidiaRouter.swift */,
+				408F254D2782370500CD34F1 /* CatDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -396,6 +421,7 @@
 			files = (
 				4054F383277E59EA0029BE10 /* EncyclopediaPayLoad.swift in Sources */,
 				4054F378277DF1B40029BE10 /*  EncyclopediaInteractor.swift in Sources */,
+				408F254A278230BA00CD34F1 /* CatDetailViewController.swift in Sources */,
 				4054F381277E3FA90029BE10 /* CatModel.swift in Sources */,
 				409150762774A7F100DE38EA /* EncyclopediaViewController.swift in Sources */,
 				4054F37A277DF3500029BE10 /* ApiManager.swift in Sources */,
@@ -405,9 +431,11 @@
 				4054F37C277DF3D10029BE10 /* URLSessionProtocol.swift in Sources */,
 				4021FC4227775CC4006C400F /* EncyclopediaViewProtocol.swift in Sources */,
 				4021FC4B27778BDF006C400F /* EncyclopediaExtensions.swift in Sources */,
+				408F254C2782311200CD34F1 /* CatDetailsViewProtocol.swift in Sources */,
 				408F25412781D17D00CD34F1 /* LayoutHelper.swift in Sources */,
 				40201FE02781117800054257 /* AsyncFetcherOperation.swift in Sources */,
 				409150742774A7F100DE38EA /* SceneDelegate.swift in Sources */,
+				408F254E2782370500CD34F1 /* CatDetailRouter.swift in Sources */,
 				4054F375277DEF180029BE10 /* EncyclopediaPresenter.swift in Sources */,
 				40201FDE2781100400054257 /* AsyncFetcher.swift in Sources */,
 				4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */,

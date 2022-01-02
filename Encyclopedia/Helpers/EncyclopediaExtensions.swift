@@ -15,7 +15,6 @@ extension UIView {
     }
 }
 
-
 extension UIApplication {
     
     var keyWindow: UIWindow? {

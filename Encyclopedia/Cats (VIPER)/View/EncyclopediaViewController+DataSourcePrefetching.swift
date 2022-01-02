@@ -17,10 +17,9 @@ extension EncyclopediaViewController: UICollectionViewDataSourcePrefetching {
             let useThisDataForCollectionView = resultFilterData ?? catResponseData
             let model = useThisDataForCollectionView?[indexPath.item]
             
-            //let imageUrl = URL(string:(model?.imageurl!)!)
             guard let imageUrlString = model?.imageurl else {return}
             let imageUrl = URL(string:imageUrlString)
-            asyncFetcher.fetchAsync((model?.identifier)!, ImageURl: imageUrl!)
+            asyncFetcherP!.fetchAsync((model?.identifier)!, ImageURl: imageUrl!, completion: nil)
         }
     }
 
@@ -30,7 +29,7 @@ extension EncyclopediaViewController: UICollectionViewDataSourcePrefetching {
         for indexPath in indexPaths {
             let useThisDataForCollectionView = resultFilterData ?? catResponseData
             let model = useThisDataForCollectionView?[indexPath.item]
-            asyncFetcher.cancelFetch((model?.identifier)!)
+            asyncFetcherP!.cancelFetch((model?.identifier)!)
         }
     }
 }

@@ -16,13 +16,18 @@ class EncyclopidiaRouter: EncyclopediaRouterProtocol {
         
         let presenter = EncyclopediaPresenter()
         let interactor = EncyclopediaInteractor()
-        //let router = EncyclopidiaRouter()
+        let router = EncyclopidiaRouter()
         
         presenter.view = view
       
         presenter.encyclopediaInteractor = interactor
         view.presenter = presenter
         interactor.outputProtocol = presenter
+        presenter.router = router
 
+    }
+    
+    func showDetailView(detailView: CatDetailsViewProtocol, catResposne: CatsResponse){
+        CatDetailRouter().assembleModule(response: catResposne, view: detailView)
     }
 }

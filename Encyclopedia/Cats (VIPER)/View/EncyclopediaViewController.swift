@@ -10,12 +10,12 @@ import UIKit
 class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
    
     /// Search controller to help us with filtering.
-   private var searchController: UISearchController!
+    private var searchController: UISearchController!
     var presenter: EncyclopediaPresenter?
-    /// An `AsyncFetcher` that is used to asynchronously fetch `DisplayData` objects.
-     let asyncFetcher = AsyncFetcher()
-     var catResponseData: [CatsResponse]?
-     var resultFilterData: [CatsResponse]?
+    /// An `AsyncFetcher protocol` that is used to asynchronously fetch `DisplayImage` objects.
+    var asyncFetcherP: AsynFetcherProtocol?
+    var catResponseData: [CatsResponse]?
+    var resultFilterData: [CatsResponse]?
     
    @IBOutlet weak var collectionView: UICollectionView!
     
@@ -23,6 +23,7 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        asyncFetcherP = AsyncFetcher()
         setUpSearchController()
         presenter?.processCatListApi()
         
@@ -52,6 +53,16 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
         collectionView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let cell = sender as? EncyclopediaCollectionCellView else { return }
+        guard let index = collectionView.indexPath(for: cell)?.item else { return }
+        guard let detailView = segue.destination as? CatDetailViewController else { return }
+        let useThisDataForCollectionView = resultFilterData ?? catResponseData
+        let catData = useThisDataForCollectionView?[index]
+        presenter?.pushToDetailView(detailView: detailView, forResponse: catData)
+    }
+    
 }
 
 // MARK: - Extension for UICollectionView DataSource
@@ -62,9 +73,7 @@ extension EncyclopediaViewController: UICollectionViewDataSource {
     }
     
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         
          let useThisDataForCollectionView = resultFilterData ?? catResponseData
-         
          guard let data = useThisDataForCollectionView else { return 0 }
          return data.count
     }
@@ -78,39 +87,9 @@ extension EncyclopediaViewController: UICollectionViewDataSource {
         }
                 
         let useThisDataForCollectionView = resultFilterData ?? catResponseData
-     
-        if let catData = useThisDataForCollectionView?[indexPath.item] {
-                        
-            cell.representedIdentifier = catData.identifier
-            guard let imageUrlString = catData.imageurl else {
-                cell.displayData(catsImage: nil, catName: catData.name)
-                return cell}
-            let imageUrl = URL(string:imageUrlString)
-
-            // Check if the `asyncFetcher` has already fetched data for the specified identifier.
-            if let fetchedData = asyncFetcher.fetchedData(for: catData.identifier!) {
-                // The data has already been fetched and cached; use it to configure the cell.
-                cell.displayData(catsImage: fetchedData.imageCat, catName: catData.name)
-            } else {
-                // There is no data available; clear the cell until we've fetched data.
-                cell.displayData(catsImage: nil, catName: nil)
-
-                // Ask the `asyncFetcher` to fetch data for the specified identifier.
-                asyncFetcher.fetchAsync(catData.identifier!,ImageURl: imageUrl!) { fetchedData in
-                    DispatchQueue.main.async {
-                        /*
-                         The `asyncFetcher` has fetched data for the identifier. Before
-                         updating the cell, check if it has been recycled by the
-                         collection view to represent other data.
-                         */
-                        guard cell.representedIdentifier == catData.identifier else { return }
-
-                        // Configure the cell with the fetched image.
-                        cell.displayData(catsImage: fetchedData!.imageCat, catName: catData.name)
-                    }
-                }
-            }
-        }
+        
+        guard let catData = useThisDataForCollectionView?[indexPath.item] else { return cell }
+            cell.configureCellData(catData: catData,asyncFetcher: asyncFetcherP!)
         
         return cell
     }

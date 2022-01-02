@@ -12,6 +12,7 @@ protocol EncyclopediaViewProtocol :AnyObject {
     
     var presenter: EncyclopediaPresenter? { get set}
     var collectionView : UICollectionView! { get  set }
+    var asyncFetcherP: AsynFetcherProtocol? { get }
     func reloadCatsCollectionView()
     
 }
@@ -20,8 +21,11 @@ protocol EncyclopediaPresenterProtocol {
     
     var view: EncyclopediaViewProtocol? { get set }
     var response: [CatsResponse]? {get}
+    var router: EncyclopediaRouterProtocol? { get }
     var encyclopediaInteractor: EncyclopediaInteractorProtocol? { get set }
     func processCatListApi()
+   // func pushToDetailView(detailView: CatDetailsViewProtocol, forIndex: Int)
+    func pushToDetailView(detailView: CatDetailsViewProtocol, forResponse: CatsResponse?)
     
     
 }
@@ -44,4 +48,5 @@ protocol EncyclopediaRouterProtocol {
     
     var presenter: EncyclopediaPresenterProtocol? {get set}
     func assembleModule(view: EncyclopediaViewProtocol)
+    func showDetailView(detailView: CatDetailsViewProtocol, catResposne: CatsResponse)
 }
