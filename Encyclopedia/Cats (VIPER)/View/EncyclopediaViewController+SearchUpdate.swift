@@ -2,7 +2,7 @@
 //  EncyclopediaViewController+SearchUpdate.swift
 //  Encyclopedia
 //
-//  Created by kumaresh shrivastava on 02/01/2022.
+//  Created by  on 02/01/2022.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  AsyncFetcher.swift
 //  Encyclopedia
 //
-//  Created by kumaresh shrivastava on 01/01/2022.
+//  Created by  on 01/01/2022.
 //
 
 import Foundation

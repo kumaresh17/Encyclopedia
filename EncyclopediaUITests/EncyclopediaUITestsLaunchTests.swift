@@ -2,7 +2,7 @@
 //  EncyclopediaUITestsLaunchTests.swift
 //  EncyclopediaUITests
 //
-//  Created by kumaresh shrivastava on 23/12/2021.
+//  Created by  on 23/12/2021.
 //
 
 import XCTest

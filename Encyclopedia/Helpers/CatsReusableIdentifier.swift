@@ -2,7 +2,7 @@
 //  CatsReusableIdentifier.swift
 //  Encyclopedia
 //
-//  Created by kumaresh shrivastava on 25/12/2021.
+//  Created by  on 25/12/2021.
 //
 
 import Foundation
