@@ -26,6 +26,7 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
         asyncFetcherP = AsyncFetcher()
         setUpSearchController()
         presenter?.processCatListApi()
+        collectionView.delegate = self
         
     }
     
@@ -93,8 +94,8 @@ extension EncyclopediaViewController: UICollectionViewDataSource {
         
         return cell
     }
+    
 }
-
 
 
 

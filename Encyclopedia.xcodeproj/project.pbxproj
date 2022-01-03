@@ -21,6 +21,7 @@
 		4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */; };
 		4054F381277E3FA90029BE10 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F380277E3FA90029BE10 /* CatModel.swift */; };
 		4054F383277E59EA0029BE10 /* EncyclopediaPayLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */; };
+		4066BF362783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BF352783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift */; };
 		408F253F2781D12E00CD34F1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F253E2781D12E00CD34F1 /* ActivityView.swift */; };
 		408F25412781D17D00CD34F1 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25402781D17D00CD34F1 /* LayoutHelper.swift */; };
 		408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */; };
@@ -75,6 +76,7 @@
 		4054F37D277E36810029BE10 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		4054F380277E3FA90029BE10 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
 		4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaPayLoad.swift; sourceTree = "<group>"; };
+		4066BF352783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+ViewFlowLayout.swift"; sourceTree = "<group>"; };
 		408F253E2781D12E00CD34F1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		408F25402781D17D00CD34F1 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaConstants.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				409150752774A7F100DE38EA /* EncyclopediaViewController.swift */,
 				408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */,
 				408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */,
+				4066BF352783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift */,
 				4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */,
 				408F2550278258B500CD34F1 /* WikiButton.swift */,
 				408F25482782307A00CD34F1 /* Cat Detail View */,
@@ -443,6 +446,7 @@
 				4054F375277DEF180029BE10 /* EncyclopediaPresenter.swift in Sources */,
 				40201FDE2781100400054257 /* AsyncFetcher.swift in Sources */,
 				4054F37E277E36810029BE10 /* NetworkReachabilityManager.swift in Sources */,
+				4066BF362783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift in Sources */,
 				4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */,
 				408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */,
 				408F25472781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift in Sources */,

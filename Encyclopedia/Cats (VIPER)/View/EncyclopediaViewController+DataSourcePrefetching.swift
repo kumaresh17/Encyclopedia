@@ -32,4 +32,6 @@ extension EncyclopediaViewController: UICollectionViewDataSourcePrefetching {
             asyncFetcherP!.cancelFetch((model?.identifier)!)
         }
     }
+    
+   
 }

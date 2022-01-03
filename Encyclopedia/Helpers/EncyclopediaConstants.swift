@@ -15,3 +15,4 @@ let genericError = "Something wrong happened, please try later"
 let networkError = "Your network seems to be down, please check your connection and try again"
 let noFCats = "We don't have any cat to show"
 let memoryLimitConstant = 1000000000 // in bytes
+let minimunLineSpacingForCollectionView = 25.0
