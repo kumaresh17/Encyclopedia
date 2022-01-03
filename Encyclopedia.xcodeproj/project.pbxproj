@@ -24,6 +24,7 @@
 		4066BF362783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BF352783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift */; };
 		4066BF38278333A500594570 /* EncyclopediaViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BF37278333A500594570 /* EncyclopediaViewController+DataSource.swift */; };
 		4066BF3C278336C600594570 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BF3A278336C600594570 /* AlertViewController.swift */; };
+		4066BF4027837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BF3F27837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift */; };
 		408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */; };
 		408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */; };
 		408F25472781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */; };
@@ -79,6 +80,7 @@
 		4066BF352783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+ViewFlowLayout.swift"; sourceTree = "<group>"; };
 		4066BF37278333A500594570 /* EncyclopediaViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4066BF3A278336C600594570 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		4066BF3F27837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaTests+PayLoadFormat.swift"; sourceTree = "<group>"; };
 		408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaConstants.swift; sourceTree = "<group>"; };
 		408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+SearchUpdate.swift"; sourceTree = "<group>"; };
 		408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+DataSourcePrefetching.swift"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				409150882774A7F300DE38EA /* EncyclopediaTests.swift */,
+				4066BF3F27837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift */,
 			);
 			path = EncyclopediaTests;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				409150892774A7F300DE38EA /* EncyclopediaTests.swift in Sources */,
+				4066BF4027837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
