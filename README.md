@@ -19,4 +19,9 @@ b. UICollection view use of snapshot concept
 c.Use of combine(reactive programing) in current architecture of VIPER
  ---------
  
+ ![image](https://user-images.githubusercontent.com/19665932/147977717-28743680-aec6-4d67-8c2b-b664941d5a2f.png)
+
  
+![Simulator Screen Shot - iPhone 13 Pro Max - 2022-01-03 at 14 19 38](https://user-images.githubusercontent.com/19665932/147977803-c45244d9-9a5f-45c2-a8a1-6208ceefcf56.png)
+
+![Simulator Screen Shot - iPhone 13 Pro Max - 2022-01-03 at 13 35 32](https://user-images.githubusercontent.com/19665932/147977813-631e8320-c438-4752-90d4-858f98726498.png)
