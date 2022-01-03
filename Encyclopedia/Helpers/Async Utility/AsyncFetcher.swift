@@ -157,8 +157,7 @@ class AsyncFetcher: NSCache<AnyObject, AnyObject>, AsynFetcherProtocol{
     }
 }
 
-extension AsyncFetcher: NSCacheDelegate
-{
+extension AsyncFetcher: NSCacheDelegate {
     func cache(_ cache: NSCache<AnyObject, AnyObject>, willEvictObject obj: Any) {
        //TODO: To perform some action which image is removed from the cache as pe the memory limit
         print("image Evicted from NScache to save memory")

@@ -8,14 +8,14 @@
 import UIKit
 
 class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
-   
+ 
     /// Search controller to help us with filtering.
     private var searchController: UISearchController!
     var presenter: EncyclopediaPresenter?
     /// An `AsyncFetcher protocol` that is used to asynchronously fetch `DisplayImage` objects.
     var asyncFetcherP: AsynFetcherProtocol?
-    var catResponseData: [CatsResponse]?
-    var resultFilterData: [CatsResponse]?
+    var catResponseData: [CatsResponseProtocol]?
+    var resultFilterData: [CatsResponseProtocol]?
     
    @IBOutlet weak var collectionView: UICollectionView!
     
@@ -62,4 +62,5 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
         // View asking the presenter for pushing another view
         presenter?.pushToDetailView(detailView: detailView, forResponse: catData)
     }
+   
 }

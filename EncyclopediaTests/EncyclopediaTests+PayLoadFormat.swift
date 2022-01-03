@@ -44,6 +44,15 @@ extension EncyclopediaTests: PayLoadFormat {
     func mockData()  {
        
         cat = TestCatResponse(name: "Abyssinian", imageurl: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg", temperament: "Active, Energetic, Independent, Intelligent, Gentle", energylevel: 5, externalLinkToWikipedia: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", identifier: UUID())
+        
+       let cat2 = TestCatResponse(name: "American Bobtail", imageurl: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg", temperament: "Active, Energetic, Independent, Intelligent, Gentle", energylevel: 5, externalLinkToWikipedia: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", identifier: UUID())
+        
+       let cat3 = TestCatResponse(name: "American Bobtail", imageurl: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg", temperament: "Active, Energetic, Independent, Intelligent, Gentle", energylevel: 5, externalLinkToWikipedia: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", identifier: UUID())
+        
+        catsDataArray.append(cat)
+        catsDataArray.append(cat2)
+        catsDataArray.append(cat3)
+        
     }
 
     /**

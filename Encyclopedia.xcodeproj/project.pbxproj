@@ -26,7 +26,7 @@
 		4066BF3C278336C600594570 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BF3A278336C600594570 /* AlertViewController.swift */; };
 		4066BF4027837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BF3F27837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift */; };
 		408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */; };
-		408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */; };
+		408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchResult.swift */; };
 		408F25472781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */; };
 		408F254A278230BA00CD34F1 /* CatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F2549278230BA00CD34F1 /* CatDetailViewController.swift */; };
 		408F254C2782311200CD34F1 /* CatDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408F254B2782311200CD34F1 /* CatDetailsViewProtocol.swift */; };
@@ -82,7 +82,7 @@
 		4066BF3A278336C600594570 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4066BF3F27837BA600594570 /* EncyclopediaTests+PayLoadFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaTests+PayLoadFormat.swift"; sourceTree = "<group>"; };
 		408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaConstants.swift; sourceTree = "<group>"; };
-		408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+SearchUpdate.swift"; sourceTree = "<group>"; };
+		408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+SearchResult.swift"; sourceTree = "<group>"; };
 		408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncyclopediaViewController+DataSourcePrefetching.swift"; sourceTree = "<group>"; };
 		408F2549278230BA00CD34F1 /* CatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailViewController.swift; sourceTree = "<group>"; };
 		408F254B2782311200CD34F1 /* CatDetailsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsViewProtocol.swift; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 				409150752774A7F100DE38EA /* EncyclopediaViewController.swift */,
 				4066BF37278333A500594570 /* EncyclopediaViewController+DataSource.swift */,
 				408F25462781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift */,
-				408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift */,
+				408F25442781DF0B00CD34F1 /* EncyclopediaViewController+SearchResult.swift */,
 				4066BF352783326000594570 /* EncyclopediaViewController+ViewFlowLayout.swift */,
 				4021FC452777618A006C400F /* EncyclopediaCollectionCellView.swift */,
 				408F2550278258B500CD34F1 /* WikiButton.swift */,
@@ -468,7 +468,7 @@
 				4021FC462777618A006C400F /* EncyclopediaCollectionCellView.swift in Sources */,
 				408F25432781D31F00CD34F1 /* EncyclopediaConstants.swift in Sources */,
 				408F25472781DFFF00CD34F1 /* EncyclopediaViewController+DataSourcePrefetching.swift in Sources */,
-				408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchUpdate.swift in Sources */,
+				408F25452781DF0B00CD34F1 /* EncyclopediaViewController+SearchResult.swift in Sources */,
 				40201FE2278111FF00054257 /* DisplayImage.swift in Sources */,
 				4066BF38278333A500594570 /* EncyclopediaViewController+DataSource.swift in Sources */,
 				40A43C7C277F338B007D181E /* EncyclopidiaRouter.swift in Sources */,

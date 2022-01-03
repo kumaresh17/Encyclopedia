@@ -13,6 +13,8 @@ protocol EncyclopediaViewProtocol :AnyObject {
     var presenter: EncyclopediaPresenter? { get set}
     var collectionView : UICollectionView! { get  set }
     var asyncFetcherP: AsynFetcherProtocol? { get }
+    var catResponseData: [CatsResponseProtocol]? { get set }
+    func searchCats(catText: String) -> [CatsResponseProtocol]?
     func reloadCatsCollectionView()
     
 }
@@ -25,7 +27,7 @@ protocol EncyclopediaPresenterProtocol {
     var encyclopediaInteractor: EncyclopediaInteractorProtocol? { get set }
     func processCatListApi()
    // func pushToDetailView(detailView: CatDetailsViewProtocol, forIndex: Int)
-    func pushToDetailView(detailView: CatDetailsViewProtocol, forResponse: CatsResponse?)
+    func pushToDetailView(detailView: CatDetailsViewProtocol, forResponse: CatsResponseProtocol?)
     
     
 }

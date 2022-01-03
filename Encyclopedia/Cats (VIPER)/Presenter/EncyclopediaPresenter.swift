@@ -18,7 +18,7 @@ class EncyclopediaPresenter :EncyclopediaPresenterProtocol {
         encyclopediaInteractor?.decodeCatApi()
     }
     
-    func pushToDetailView(detailView: CatDetailsViewProtocol, forResponse: CatsResponse?) {
+    func pushToDetailView(detailView: CatDetailsViewProtocol, forResponse: CatsResponseProtocol?) {
         guard let result = forResponse else { return }
         router?.showDetailView(detailView: detailView, catResposne:result)
     }
