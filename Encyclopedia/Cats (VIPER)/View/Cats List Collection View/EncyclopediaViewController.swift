@@ -32,7 +32,7 @@ class EncyclopediaViewController: UIViewController,EncyclopediaViewProtocol{
         searchController = UISearchController()
         searchController.searchResultsUpdater = self
         searchController.searchBar.autocapitalizationType = .none
-        searchController.searchBar.searchTextField.placeholder = NSLocalizedString("Enter a cat name", comment: "")
+        searchController.searchBar.searchTextField.placeholder = NSLocalizedString(searchByCatName, comment: "")
         searchController.searchBar.returnKeyType = .done
         
         // Place the search bar in the navigation bar.

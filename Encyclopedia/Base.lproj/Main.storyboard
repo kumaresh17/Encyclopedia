@@ -121,6 +121,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60G-cL-W1a" customClass="WikiButton" customModule="Encyclopedia" customModuleProvider="target">
                                 <rect key="frame" x="20" y="604" width="374" height="31"/>
                                 <color key="backgroundColor" red="1" green="0.56470588239999997" blue="0.28009491479999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="gCv-l6-0WJ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="More Details"/>
                                 <userDefinedRuntimeAttributes>

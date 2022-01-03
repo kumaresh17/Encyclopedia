@@ -174,9 +174,9 @@
 			children = (
 				408F254F278244E900CD34F1 /* URLSession Utility */,
 				40201FDC27810FE000054257 /* Async Utility */,
+				4066BF3E27833D0400594570 /* Cat PayLoad */,
 				4021FC4A27778BDF006C400F /* EncyclopediaExtensions.swift */,
 				4021FC4C27779246006C400F /* CatsReusableIdentifier.swift */,
-				4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */,
 				408F25422781D31F00CD34F1 /* EncyclopediaConstants.swift */,
 				4066BF3A278336C600594570 /* AlertViewController.swift */,
 			);
@@ -219,6 +219,14 @@
 				408F2550278258B500CD34F1 /* WikiButton.swift */,
 			);
 			path = "Cats List Collection View";
+			sourceTree = "<group>";
+		};
+		4066BF3E27833D0400594570 /* Cat PayLoad */ = {
+			isa = PBXGroup;
+			children = (
+				4054F382277E59EA0029BE10 /* EncyclopediaPayLoad.swift */,
+			);
+			path = "Cat PayLoad";
 			sourceTree = "<group>";
 		};
 		408F25482782307A00CD34F1 /* Cat Detail View */ = {

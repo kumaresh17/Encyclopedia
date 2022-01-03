@@ -45,6 +45,6 @@ extension EncyclopediaPresenter: EncyclopediaOutputProtocol {
         view?.reloadCatsCollectionView()
     }
     func errorOccured(message: String) {
-        AlertViewController.showAlert(withTitle: alertTitle, message: networkError)
+        AlertViewController.showAlert(withTitle: alertTitle, message: message)
     }
 }

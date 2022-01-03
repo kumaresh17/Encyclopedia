@@ -16,3 +16,4 @@ let networkError = "Your network seems to be down, please check your connection 
 let noFCats = "We don't have any cat to show"
 let memoryLimitConstant = 1000000000 // in bytes
 let minimunLineSpacingForCollectionView = 25.0
+let searchByCatName = "Search by cat name"
