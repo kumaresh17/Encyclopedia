@@ -48,5 +48,5 @@ protocol EncyclopediaRouterProtocol {
     
     var presenter: EncyclopediaPresenterProtocol? {get set}
     func assembleModule(view: EncyclopediaViewProtocol)
-    func showDetailView(detailView: CatDetailsViewProtocol, catResposne: CatsResponse)
+    func showDetailView(detailView: CatDetailsViewProtocol, catResposne: CatsResponseProtocol)
 }

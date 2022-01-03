@@ -27,7 +27,7 @@ class EncyclopidiaRouter: EncyclopediaRouterProtocol {
 
     }
     
-    func showDetailView(detailView: CatDetailsViewProtocol, catResposne: CatsResponse){
+    func showDetailView(detailView: CatDetailsViewProtocol, catResposne: CatsResponseProtocol){
         CatDetailRouter().assembleModule(response: catResposne, view: detailView)
     }
 }
