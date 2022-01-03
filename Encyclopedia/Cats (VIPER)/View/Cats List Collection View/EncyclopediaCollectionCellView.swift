@@ -24,7 +24,6 @@ final class EncyclopediaCollectionCellView: UICollectionViewCell {
             catImageView.image = catsImage
         }
         catNameLabel.text = catName
-        
     }
 
     func configureCellData(catData: CatsResponse,asyncFetcher: AsynFetcherProtocol) {

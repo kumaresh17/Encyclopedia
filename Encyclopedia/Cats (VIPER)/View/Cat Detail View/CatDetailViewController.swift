@@ -42,7 +42,6 @@ class CatDetailViewController: UIViewController,CatDetailsViewProtocol {
     @IBAction func wikiLinkAction(_ sender: Any) {
         guard let pageUrl = response?.externalLinkToWikipedia else { return}
         router?.openWebPage(for: pageUrl)
-        
     }
     
 }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-
 extension EncyclopediaViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return minimunLineSpacingForCollectionView
     }
