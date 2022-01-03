@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SuS-9U-1EH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -95,35 +96,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-Yw-DB9">
-                                <rect key="frame" x="15" y="99" width="384" height="352"/>
+                                <rect key="frame" x="15" y="99" width="384" height="246.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKE-Vj-gqY">
-                                <rect key="frame" x="20" y="471" width="374" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="XvD-7G-vh9"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="365.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjT-H5-b1J">
-                                <rect key="frame" x="20" y="523" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="406" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJH-h5-hYb">
-                                <rect key="frame" x="20" y="563.5" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="446.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60G-cL-W1a" customClass="WikiButton" customModule="Encyclopedia" customModuleProvider="target">
-                                <rect key="frame" x="20" y="604" width="374" height="31"/>
+                                <rect key="frame" x="20" y="487" width="374" height="31"/>
                                 <color key="backgroundColor" red="1" green="0.56470588239999997" blue="0.28009491479999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="gCv-l6-0WJ"/>
-                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="More Details"/>
                                 <userDefinedRuntimeAttributes>
@@ -157,9 +152,9 @@
                         <constraints>
                             <constraint firstItem="YKE-Vj-gqY" firstAttribute="trailing" secondItem="8Gv-Yw-DB9" secondAttribute="trailing" constant="-5" id="1HE-Nz-YaO"/>
                             <constraint firstItem="nJH-h5-hYb" firstAttribute="top" secondItem="UjT-H5-b1J" secondAttribute="bottom" constant="20" id="8N6-82-Muc"/>
+                            <constraint firstItem="UQh-SB-Egx" firstAttribute="bottom" secondItem="60G-cL-W1a" secondAttribute="bottom" constant="344" id="9QG-nj-agj"/>
                             <constraint firstItem="UjT-H5-b1J" firstAttribute="leading" secondItem="YKE-Vj-gqY" secondAttribute="leading" id="C9p-zV-46q"/>
                             <constraint firstItem="60G-cL-W1a" firstAttribute="leading" secondItem="UjT-H5-b1J" secondAttribute="leading" id="DXI-Ge-iou"/>
-                            <constraint firstItem="UQh-SB-Egx" firstAttribute="bottom" secondItem="60G-cL-W1a" secondAttribute="bottom" constant="227" id="MXF-ig-3WP"/>
                             <constraint firstItem="UjT-H5-b1J" firstAttribute="top" secondItem="YKE-Vj-gqY" secondAttribute="bottom" constant="20" id="NMf-2S-oJB"/>
                             <constraint firstItem="8Gv-Yw-DB9" firstAttribute="leading" secondItem="UQh-SB-Egx" secondAttribute="leading" constant="15" id="Qwv-Em-QtQ"/>
                             <constraint firstItem="nJH-h5-hYb" firstAttribute="trailing" secondItem="UjT-H5-b1J" secondAttribute="trailing" id="RM5-Ql-nea"/>

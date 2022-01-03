@@ -25,13 +25,6 @@ class EncyclopediaPresenter :EncyclopediaPresenterProtocol {
     
 }
 
-/**
- var name: String?
- var imageurl: String?
- var temperament: String?
- var energylevel: String?
- var externalLinkToWikipedia: String?
- */
 // MARK: - Presenter to view communcation
 extension EncyclopediaPresenter: EncyclopediaOutputProtocol {
     
