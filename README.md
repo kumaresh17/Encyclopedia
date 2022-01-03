@@ -1,12 +1,12 @@
 # Encyclopedia
 
-A Sample app to show List of cat  breeds
+**A Sample app to show List of cat  breeds**
 
-Universal app
+**Universal app**
 
-Minimum iOS deployment target is 14.5
+**Minimum iOS deployment target is 14.5**
 
-App shows use of:-
+**App shows use of:-**
 a. Code structure and software design patterns - using VIPER CLEAN architecture 
 b. Multithreading/ synchronisation handling/Memory management - using Operation Queue and NSCache and it free the image data if memory cross the set threshold.
 c. IBDesignable and IBInspectable
