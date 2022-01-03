@@ -1,6 +1,6 @@
 # Encyclopedia
 
-**A Sample app to show List of cat  breeds**
+**A Sample app to show list of cats breed, app provide user to search the cat by there name and can navigate to detail screen to see more information about the cat**
 
 **Universal app**
 
