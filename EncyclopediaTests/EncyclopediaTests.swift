@@ -37,24 +37,7 @@ class EncyclopediaTests: XCTestCase {
         cat = nil
     }
     
-    /**
-     Test case to check if the Module has been added and the view has been configured to show
-     */
-    func testThatItShowsCatsViewScreen() {
-        router.assembleModule(view: view)
-        XCTAssertTrue(router.showCatViewCalled)
-        XCTAssertNil(router.presenter?.view, "View can not be nil")
-    }
-    
-    /**
-     Test case to check if the detail view has been configured to show
-     */
-    func testThatItShowsDetailViewScreen() {
-        router.showDetailView(detailView: detailView, catResposne: cat)
-        XCTAssertTrue(router.showDetailViewCalled)
-        XCTAssertNil(router.presenter?.view, "View can not be nil")
-    }
-     
+
     /**
      Test case to check if the url is a valid url or not
      Supply some invalid url string to make it fail
